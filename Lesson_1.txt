@@ -1,0 +1,73 @@
+//Пока у меня так получилось. Последнее задание с массивами не успеваю до сдачи сделать, продолжаю работать.
+
+public class Man {
+
+      static void run() {            //Компилятор заставлял статик прописывать.
+         if (Track.length < 5  )       Иначе выделял все красным и ругался.
+        System.out.println("Man Run");
+         else
+             System.out.println("Man Don't Run");
+    }
+     static void jump() {
+         if (Wall.height < 2  )
+        System.out.println("Man Jump");
+         else
+             System.out.println("Man Don't Jump");
+    }
+}
+
+
+public class Cat {
+
+    static void run() {
+        if (Track.length <= 1)
+        System.out.println("Cat Run");
+        else
+            System.out.println("Cat Don't Run");
+    }
+
+    static void jump() {
+        if (Wall.height <= 2)
+        System.out.println("Cat Jump");
+        else
+            System.out.println("Cat Don't Jump");
+    }
+}
+
+
+public class Robot {
+
+    static void run() {
+        if (Track.length <= 1)
+        System.out.println("Robot Run");
+        else
+            System.out.println("Robot Don't Run");
+    }
+
+    static void jump() {
+        System.out.println("Robot don't Jump");
+    }
+}
+
+public class Track {
+    public static int length = 4;
+    //int length = 4;
+}
+
+
+public class Wall {
+    public static int height = 2;
+}
+
+
+public class Main {
+    public static void main (String[] args){
+      
+        Man.run();
+        Man.jump();
+        Cat.run();
+        Cat.jump();
+        Robot.run();
+        Robot.jump();
+    }
+}
